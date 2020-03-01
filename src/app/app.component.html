@@ -1,0 +1,22 @@
+<header *ngIf="salesRep" class="toolbar">
+    <img alt="{{salesRep.CompanyName}}"
+        src="{{productimagesUrl}}" />
+</header>
+
+<main class="content" role="main" *ngIf="salesRep">
+    <h1>{{salesRep.CompanyName}}</h1>
+    <router-outlet></router-outlet>  
+</main>
+<footer *ngIf="salesRep" class="footer">
+    <ul>
+        <li *ngIf="salesRep.FirstName && salesRep.LastName"><i class="fa fa-user"></i> {{salesRep.FirstName +" "+salesRep.LastName}}</li>
+        <li *ngIf="salesRep.EmailAddress"><i class="fa fa-envelope"></i> {{salesRep.EmailAddress}}</li>
+        <li *ngIf="salesRep.CellPhone"><i class="fa fa-mobile"></i> {{salesRep.CellPhone}}</li>
+        <li *ngIf="salesRep.Phone"><i class="fa fa-phone"></i> {{salesRep.Phone}}</li>
+        <li *ngIf="salesRep.Fax"><i class="fa fa-fax"></i> {{salesRep.Fax}}</li>
+        <li *ngIf="salesRep.City && salesRep.State && salesRep.PostalCode">
+            <i class="fa fa-map-marker"></i>
+            {{salesRep.City +", "+salesRep.State +", "+salesRep.PostalCode }}
+        </li>
+    </ul>
+</footer>

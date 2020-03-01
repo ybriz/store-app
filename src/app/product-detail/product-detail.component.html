@@ -1,0 +1,27 @@
+<nav>
+    <a routerLink="/products"><i class="fa fa-chevron-left"></i>Product List</a>
+</nav>
+<div class="product-container">
+    <div class="product-images">
+        <img class="product" alt="{{product.ItemName}}" src="{{product.PhotoName}}?width=200&Cache=Alway" />
+    </div>
+    <div class="left-container">
+        <h2>{{product.ItemName | uppercase}}</h2>
+    
+        <p>{{product.Description}}</p>
+    </div>
+</div>
+<ul class="specs">
+    <li>
+        <span>Item ID</span>
+        <p>{{product.ItemID}}</p>
+    </li>
+    <li>
+        <span>Dimentions</span>
+        <p>{{product.Dimensions}}</p>
+    </li>
+    <li>
+        <span>Base Price</span>
+        <p>{{product.BasePrice | currency}}</p>
+    </li>
+</ul>
