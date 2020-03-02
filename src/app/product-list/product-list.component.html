@@ -1,3 +1,4 @@
+<app-product-search></app-product-search>
 <div class="product-card-container">
     <a *ngFor="let product of products" class="card" (click)="showProductDetails(product)">
         <img alt="{{product.ItemName}}" src="{{product.PhotoName}}?height=50&Cache=Alway" />
