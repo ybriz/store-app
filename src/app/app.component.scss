@@ -1,4 +1,4 @@
-header {
+.header {
   display: flex;
   align-items: center;
 
@@ -22,15 +22,6 @@ header {
   }
 }
 
-ul {
-  list-style: none;
-  padding-left: 0;
-
-  li {
-    margin-bottom: 10px;
-  }
-}
-
 .footer {
   position: fixed;
   left: 0;
@@ -40,5 +31,14 @@ ul {
   background-color: #00aae2;
   color: white;
   text-align: center;
+
+  ul {
+    list-style: none;
+    padding-left: 0;
+  
+    li {
+      margin-bottom: 10px;
+    }
+  }
 }
 

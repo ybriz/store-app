@@ -1,8 +1,7 @@
-<header *ngIf="salesRep" class="toolbar">
+<header *ngIf="salesRep" class="header">
     <img alt="{{salesRep.CompanyName}}"
         src="{{productimagesUrl}}" />
 </header>
-
 <main class="content" role="main" *ngIf="salesRep">
     <h1>{{salesRep.CompanyName}}</h1>
     <router-outlet></router-outlet>  
